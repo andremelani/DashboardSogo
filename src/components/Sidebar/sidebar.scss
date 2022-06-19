@@ -1,0 +1,196 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 150px;
+  background-color: #002743;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0 10px 10px 0;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+  .logo {
+    display: grid;
+    place-items: center;
+    height: 120px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: "Mochiy Pop P one", sans-serif;
+    color: #fff;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .menu {
+    position: relative;
+
+    .item {
+      display: flex;
+      align-items: center;
+      place-content: flex-start;
+      padding: 1.2rem 1rem;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #fff;
+      transition: color 0.3s ease-in-out;
+      margin-left: 3px;
+      font-family: "Visby Round CF, Medium";
+      @media (max-width: 768px) {
+        display: none;
+      }
+
+      &.active {
+        color: #002743;
+        font-family: "Visby Round CF, Medium";
+        border-radius: 8px;
+        background-color: #fff;
+        z-index: -1;
+        width: 95%;
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+
+      .icon {
+        margin-right: 1rem;
+        @media (max-width: 768px) {
+          display: none;
+        }
+
+        i {
+          font-size: 1.75rem;
+          @media (max-width: 768px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sidebarMobile {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 10px 10px 0;
+    position: fixed;
+    width: 90%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #002743;
+  }
+  .menuMobileClose {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: flex;
+      justify-content: end;
+      width: 100%;
+      padding: 10px;
+
+      .barsClose {
+        margin-bottom: 20px;
+        height: 40px;
+        width: 40px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: #002743;
+        font-family: "Visby Round CF, Bold";
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .logo {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: grid;
+      place-items: center;
+      height: 120px;
+      font-size: 3rem;
+      font-weight: 700;
+      font-family: "Mochiy Pop P one", sans-serif;
+      color: #fff;
+    }
+  }
+
+  .menu {
+    position: relative;
+
+    .item {
+      display: none;
+
+      @media (max-width: 768px) {
+        display: flex;
+        align-items: center;
+        place-content: flex-start;
+        padding: 1.2rem 1rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #fff;
+        transition: color 0.3s ease-in-out;
+        margin-left: 3px;
+        font-family: "Visby Round CF, Medium";
+      }
+
+      &.active {
+
+        @media (max-width: 768px) {
+          color: #002743;
+          font-family: "Visby Round CF, Medium";
+          border-radius: 8px;
+          background-color: #fff;
+          z-index: -1;
+          width: 100%;
+        }
+      }
+
+      .icon {
+        @media (max-width: 768px) {
+        margin-right: 1rem;
+        }
+
+        i {
+          @media (max-width: 768px) {
+          font-size: 1.75rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menuMobile {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    width: 100%;
+
+    .bars {
+      margin-bottom: 20px;
+      height: 40px;
+      width: 40px;
+      background-color: #002743;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      color: #fff;
+    }
+  }
+}
